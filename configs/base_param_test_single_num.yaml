@@ -1,0 +1,36 @@
+in_features : 3
+feature_size : 1
+num_classes : 1
+batch_size : 1
+num_workers : 8
+scan : None
+resume : "/First02/drr/ss/train_results_newmodel/output_tau163842_admae_loss_n3_newmodel_0.001_0.006_0.0002_0.0001_1/models_save/45_0.1353.pt"
+use_cuda : True
+cuda_device : 7
+disease_list : ["EMCI", "LMCI", "CN", "AD"] #,
+submatrix_length : 4000
+model_DDP : True
+use_DDP : False
+data_path : "/First02/drr/ss/tau_163842_test"
+#save_path : "/home/yq/RA/brain_surface_proj/HCP-YA-surface-data"
+#output_dir : "/home/yq/RA/RA/code/data/output"
+#test_result_name : "test"
+model_propcess_dir : extract_feature
+model_propcess : SurfNN
+model_PE_dir : DNN
+model_PE : DNN
+model_PE_params:
+  infeature : 8
+  numclass : 1
+model_G_dir : GCN_G
+model_G : GCN_G
+model_G_params:
+  infeature : 24
+  nfeat : 1
+  nhid : 1
+model_D_dir : GCN_D
+model_D : GCN_D
+model_D_params:
+  infeature : 24
+  nfeat : 1
+  nhid : 1

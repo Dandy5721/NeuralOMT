@@ -1,0 +1,50 @@
+in_features : 3
+feature_size : 1
+num_classes : 1
+batch_size : 1
+num_workers : 8
+scan : None
+resume : None
+resume_log : None
+use_cuda : True
+save_result : True
+save_test_result : True
+transpose : True
+start_epoch : 1
+total_epochs : 50
+submatrix_length : 4000
+gamma : 0.1
+p : 0.5
+bins : 20
+use_DDP : True
+cuda_device : 0
+input_dir : "/First02/drr/tau_163842_new"
+val_dir : "/First02/drr/tau_163842_new_test"
+test_dir : "/First02/drr/tau_163842_new_test"
+output_dir : "/First02/drr/ss/train_results_newmodel/output_tau163842_admae_loss_p0.5_bins20_newmodel_0.001_0.006_0.0002_0.0001_0"
+test_result_name : "test_result_file"
+lr_pe : 0.0002  # 0.0002
+lr_pro : 0.0001  # 0.0001
+lr_g : 0.001  # 0.003
+lr_d : 0.006  # 0.003
+use_sche : True
+milestones : [6, 10, 13]
+model_propcess_dir : extract_feature_dis
+model_propcess : SurfNN
+model_PE_dir : DNN
+model_PE : DNN
+model_PE_params:
+  infeature : 8
+  numclass : 1
+model_G_dir : GCN_G
+model_G : GCN_G
+model_G_params:
+  infeature : 24
+  nfeat : 1
+  nhid : 1
+model_D_dir : GCN_D
+model_D : GCN_D
+model_D_params:
+  infeature : 24
+  nfeat : 1
+  nhid : 1
