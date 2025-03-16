@@ -1,8 +1,9 @@
-### this is for surface code
+### NeuralOMT - brain surface code
 
 ### Project Overview
 
-This repository contains code for a Brain Surface Generative Adversarial Network (GAN) with Wasserstein Distance Loss and Adversarial Autoencoder (ADMAE). The codebase includes modules for dataset construction, loss functions, models, and utilities.
+This repository contains code for a 
+"Revealing Cortical Spreading Pathway of Neuropathological Events by Neural Optimal Mass Transport". The codebase includes modules for dataset construction, loss functions, models, and utilities.
 
 ### Directory Structure
 
